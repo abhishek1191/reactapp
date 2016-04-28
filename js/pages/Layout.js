@@ -1,5 +1,7 @@
 import {Link} from "react-router"
 import React from "react"
+import Navigate from "../components/Navigate"
+import Footer from "../components/Footer"
 
 export default class Layout extends React.Component {
     // constructor() {
@@ -9,17 +11,23 @@ export default class Layout extends React.Component {
     // changeTitle(title) {
     //     this.setState({ title });
     // }
-  
+
     render() {
-          console.log(this.props);
+        const {location} = this.props;
         return (
             <div>
-                <h1>
-                    React Application
-                </h1>
-                {this.props.children}
-                <Link to="about">About</Link>
-                <Link to="contact">Contact</Link>
+                <Navigate location={location}/>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>
+                                React Application
+                            </h1>
+                            {this.props.children}
+                        </div>
+                    </div>
+                    <Footer/>
+                </div>
             </div>
         )
     }

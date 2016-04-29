@@ -1,13 +1,14 @@
-import React from "react"
+import React from "react";
+import {IndexLink, Link} from "react-router";
 
-export default class Footer extends React.Component {
+export default class Navigate extends React.Component {
    
     render() {
         const {location} = this.props;
         return (
               <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
+            
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -17,7 +18,7 @@ export default class Footer extends React.Component {
                 </button>
                 <a class="navbar-brand" href="#">Start Bootstrap</a>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
+            
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
@@ -27,13 +28,13 @@ export default class Footer extends React.Component {
                         <Link to="about">About</Link>
                     </li>
                     <li>
-                        <Link href="contact">Contact</Link>
+                        <Link to="contact">Contact</Link>
                     </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
+           
         </div>
-        <!-- /.container -->
+        
     </nav>
         )
     }

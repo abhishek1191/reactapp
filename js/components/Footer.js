@@ -4,8 +4,10 @@ export default class Footer extends React.Component {
    
     render() {
         return (
-            <div>
-               Copyright - The Indian Spiders
+             <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; SomeName</p>
+                </div>
             </div>
         )
     }
